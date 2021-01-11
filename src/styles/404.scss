@@ -1,0 +1,44 @@
+// Importing Bootstrap to get their media query mixins
+@import "imports";
+@import "variables";
+
+.not-found {
+  width: 100vw;
+  height: 100vh;
+  background-color: $trinity-blue;
+  font-family: $heading-font;
+
+  // not-found__title
+  &__title {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  // not-found__button
+  &__button {
+    border: unset;
+    border-radius: 3px;
+    padding: 10px 23px;
+    background-color: #232d3a;
+    font-size: 14px;
+    line-height: 25px;
+    font-family: $content-font;
+    letter-spacing: 0;
+  }
+}
+
+// @media (max-width: 992px)
+@include media-breakpoint-up(lg) {
+  .not-found {
+
+    // not-found__title
+    &__title {
+      font-size: 40px;
+    }
+
+    // not-found__button
+    &__button {
+      font-size: 16px;
+    }
+  }
+}

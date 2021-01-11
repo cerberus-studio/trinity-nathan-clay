@@ -1,0 +1,156 @@
+// Importing Bootstrap to get their media query mixins
+@import "imports";
+
+// Positions carousel dot list
+.react-multi-carousel-dot-list {
+  bottom: -24px;
+  // Hides unnecessary dots
+  & {
+    > li[data-index="1"],
+    > li[data-index="3"],
+    > li[data-index="5"],
+    > li[data-index="7"], {
+      display: none;
+    }
+  }
+}
+
+.react-multi-carousel-dot {
+  line-height: 9px;
+
+  & button {
+    border: 1px solid #A2B9C2;
+    width: 9px;
+    height: 9px;
+    background-color: transparent;
+  }
+
+  &--active button {
+    outline: none;
+    background-color: #A2B9C2;
+  }
+}
+
+.carousel {
+  padding-top: 34px;
+  padding-bottom: 56px;
+
+  // carousel__provider
+  &__provider {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  // carousel__heading
+  &__heading {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: $content-font;
+    letter-spacing: 1.64px;
+    color: $body-text-color;
+  }
+
+  // carousel__column
+  &__column {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  // carousel__item
+  &__item {
+    padding: 0 14px;
+  }
+
+  // carousel__button-prev
+  &__button-prev {
+    position: absolute;
+    top: 50%;
+    left: 22px;
+    display: none;
+    transform: translateY(-50%);
+    border: unset;
+    background-color: transparent;
+
+    &:active {
+      outline: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  // carousel__button-next
+  &__button-next {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    display: none;
+    transform: translateY(-50%);
+    border: unset;
+    background-color: transparent;
+
+    &:active {
+      outline: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// @media (max-width: 768px)
+@include media-breakpoint-up(md) {
+
+  .react-multi-carousel-dot-list {
+    display: none;
+  }
+
+  .carousel__button-prev {
+    left: -70px;
+    display: inline-block;
+  }
+
+  .carousel__button-next {
+    right: -70px;
+    display: inline-block;
+  }
+
+}
+
+// @media (max-width: 992px)
+@include media-breakpoint-up(lg) {
+
+  .carousel {
+    padding-top: 75px;
+    padding-bottom: 79px;
+
+    // carousel__column
+    &__column {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    // carousel__heading
+    &__heading {
+      margin-bottom: 31px;
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+
+    // carousel__button-prev
+    &__button-prev {
+      left: 22px;
+      display: inline-block;
+    }
+
+    // carousel__button-next
+    &__button-next {
+      right: 22px;
+      display: inline-block;
+    }
+
+  }
+}

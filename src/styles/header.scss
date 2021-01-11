@@ -1,0 +1,90 @@
+// Importing Bootstrap to get their media query mixins
+@import "imports";
+@import "variables";
+
+.header {
+  background-color: $trinity-blue;
+
+  // header__row
+  &__row {
+    flex-direction: column-reverse;
+  }
+
+  // header__logo-wrapper
+  &__logo-wrapper {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: center;
+  }
+
+  // header__logo
+  &__logo {
+    width: 140px;
+  }
+
+  // header__phone
+  &__phone {
+    justify-content: center;
+    background-color: #232E3E;
+    font-size: 16px;
+    line-height: 37px;
+    font-family: $content-font;
+    letter-spacing: 0;
+  }
+}
+
+// @media (max-width: 576px)
+@include media-breakpoint-up(sm) {
+  .header__row {
+      margin-left: -75px;
+      margin-right: -75px;
+    }
+}
+
+// @media (max-width: 768px)
+@include media-breakpoint-up(md) {
+  .header__row {
+    margin-left: -100px;
+    margin-right: -100px;
+  }
+}
+
+// @media (max-width: 992px)
+@include media-breakpoint-up(lg) {
+  .header {
+    padding-top: 76px;
+    padding-bottom: 47px;
+
+    &__row {
+      flex-direction: row;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    // header__logo-wrapper
+    &__logo-wrapper {
+      padding-top: unset;
+      padding-bottom: unset;
+      text-align: left;
+    }
+
+    // header__logo
+    &__logo {
+      width: 215px;
+    }
+
+    // header__phone
+    &__phone {
+      justify-content: flex-end;
+      background-color: unset;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  .header__row {
+    margin: 0 auto;
+  }
+}

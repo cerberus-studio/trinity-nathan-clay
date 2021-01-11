@@ -1,0 +1,141 @@
+// Importing Bootstrap to get their media query mixins
+@import "imports";
+@import "variables";
+
+// Sets header background color and slanted line
+.call-to-action {
+  background-image: linear-gradient(176deg, $trinity-blue 60%, #ffffff calc(60% + 2px));
+
+  // call-to-action__right-column
+  &__right-column {
+    padding-top: 18px;
+  }
+  // call-to-action__row
+  &__row {
+    padding-bottom: 32px;
+  }
+
+  // call-to-action__heading
+  &__heading {
+    font-size: 36px;
+    line-height: 48px;
+    font-family: $heading-font;
+    letter-spacing: 0;
+  }
+
+  // call-to-action__subheading
+  &__subheading {
+    padding-top: 16px;
+    font-size: 20px;
+    line-height: 26px;
+    font-family: $content-font;
+    letter-spacing: 0;
+  }
+
+  // call-to-action__list
+  &__list {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: $content-font;
+    letter-spacing: 0;
+    color: #ffffff;
+  }
+
+  // call-to-action__list-item
+  &__list-item {
+    display: flex;
+    padding-bottom: 9px;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: $content-font;
+    letter-spacing: 0;
+    color: #ffffff;
+  }
+
+  // call-to-action__list-icon
+  &__list-icon {
+    padding-top: 1px;
+    padding-right: 7px;
+  }
+
+  // call-to-action__name
+  &__name {
+    color: #ffffff;
+  }
+}
+
+// @media (max-width: 992px)
+@include media-breakpoint-up(lg) {
+  // Sets header background color and slanted line
+  .call-to-action {
+    background-image: linear-gradient(176deg, $trinity-blue 40%, #ffffff calc(40% + 2px));
+
+    // call-to-action__container
+    &__container {
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 80px;
+    }
+
+    // call-to-action__left-column
+    &__left-column {
+      flex-direction: column;
+      display: flex;
+      padding-right: 44px;
+    }
+
+    // call-to-action__right-column
+    &__right-column {
+      padding-left: 42px;
+    }
+
+    // call-to-action__heading
+    &__heading {
+      margin-top: 17px;
+      font-size: 39px;
+      line-height: 56px;
+    }
+
+    // call-to-action__subheading
+    &__subheading {
+      margin-top: 8px;
+    }
+
+    // call-to-action__list
+    &__list {
+      margin-top: 127px;
+      color: $body-text-color;
+    }
+
+    // call-to-action__list-item
+    &__list-item {
+      align-items: center;
+      color: $body-text-color;
+    }
+
+    // call-to-action__list-icon
+    &__list-icon {
+      padding-top: 3px;
+    }
+
+    // call-to-action__name
+    &__name {
+      color: #2D394A;
+    }
+  }
+}
+
+// @media (max-width: 1200px)
+@include media-breakpoint-up(xl) {
+
+  // Sets header background color and slanted line
+  .call-to-action {
+
+    // call-to-action__heading
+    &__heading {
+      font-size: 56px;
+      line-height: 75px;
+    }
+  }
+}

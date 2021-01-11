@@ -1,0 +1,48 @@
+{
+  "name": "trinity-nathan-clay",
+  "private": true,
+  "scripts": {
+    "start": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "bundle": "react-static bundle",
+    "export": "react-static export",
+    "serve": "serve dist -p 3000 -s"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@reach/router": "^1.2.1",
+    "@types/react-helmet": "^6.1.0",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.5.3",
+    "dotenv": "^8.2.0",
+    "email-validator": "^2.0.4",
+    "react": "^16.9.0",
+    "react-bootstrap": "^1.4.3",
+    "react-dom": "^16.9.0",
+    "react-favicon": "^0.0.18",
+    "react-helmet": "^6.1.0",
+    "react-multi-carousel": "cerberus-studio/react-multi-carousel",
+    "react-static": "^7.2.0",
+    "react-static-plugin-reach-router": "^7.2.0",
+    "react-static-plugin-sass": "^7.3.0",
+    "react-static-plugin-sitemap": "^7.2.0",
+    "react-static-plugin-source-filesystem": "^7.2.0",
+    "react-static-plugin-typescript": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "@types/reach__router": "^1.2",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "@types/react-hot-loader": "^4.1.0",
+    "@types/webpack-env": "^1.14.0",
+    "react-hot-loader": "^4.12.11",
+    "serve": "^11.1.0",
+    "typescript": "^3.5.3"
+  }
+}

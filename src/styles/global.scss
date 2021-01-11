@@ -1,0 +1,98 @@
+// Importing Bootstrap to get their media query mixins
+@import "imports";
+
+// Sets global container padding
+.container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+// Sets max width of layout
+.row {
+  max-width: 1440px;
+}
+
+// Styles buttons used throughout page & overrides default Bootstrap button styles
+.button {
+  margin: 0 auto;
+  border: unset;
+  border-radius: 3px;
+  width: max-content;
+  padding: 10px 23px;
+  background-color: $trinity-blue;
+  font-size: 16px;
+  line-height: 25px;
+  font-family: $content-font;
+  letter-spacing: 0;
+  &:hover {
+    background-color: $trinity-blue !important;
+  }
+  &:active {
+    opacity: 70%;
+    background-color: $trinity-blue !important;
+  }
+  &:focus {
+    background-color: $trinity-blue !important;
+  }
+}
+
+.btn-primary:disabled {
+  background-color: $trinity-blue !important;
+}
+
+// Styles section separator from call to action and working together
+hr {
+  border-bottom: 1px solid #A2B9C2;
+  margin: 0;
+  width: 100%;
+}
+
+// @media (max-width: 576px)
+@include media-breakpoint-up(sm) {
+  body {
+    font-size: 12px;
+  }
+
+  .container-fluid {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
+// @media (max-width: 768px)
+@include media-breakpoint-up(md) {
+  .container-fluid {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+// @media (max-width: 992px)
+@include media-breakpoint-up(lg) {
+  body {
+    font-size: 16px;
+  }
+
+  .container-fluid {
+    padding-left: 66px;
+    padding-right: 66px;
+  }
+}
+
+// @media (max-width: 1200px)
+@include media-breakpoint-up(xl) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

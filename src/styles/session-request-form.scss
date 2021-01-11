@@ -1,0 +1,84 @@
+// Importing Bootstrap to get their media query mixins
+@import "imports";
+@import "variables";
+
+.session-request-form {
+  padding: 32px 16px;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #ffffff;
+
+  // session-request-form__heading
+  &__heading {
+    margin-bottom: 3px;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $content-font;
+    letter-spacing: 3.13px;
+    color: $trinity-red;
+  }
+
+  // session-request-form__subheading
+  &__subheading {
+    margin-bottom: 16px;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: $heading-font;
+    letter-spacing: 0;
+    color: $trinity-blue;
+  }
+
+  // session-request-form__field
+  &__field {
+    font-size: 16px;
+    line-height: 25px;
+    font-family: $content-font;
+    letter-spacing: 0;
+    color: $body-text-color;
+  }
+
+  // session-request-form__input
+  &__input {
+    border: 1px solid #A2B9C2;
+    border-radius: 3px;
+    height: 46px;
+  }
+
+  // session-request-form__input-container
+  &__input-container {
+    margin-bottom: 20px;
+  }
+}
+
+// @media (max-width: 992px)
+@include media-breakpoint-up(lg) {
+  .session-request-form {
+    padding: 51px 48px 48px;
+
+    // session-request-form--submitted
+    &--submitted {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+
+    // session-request-form__heading
+    &__heading {
+      margin-bottom: 0;
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: 3.83px;
+    }
+
+    // session-request-form__subheading
+    &__subheading {
+      margin-bottom: 43px;
+      font-size: 36px;
+      line-height: 48px;
+    }
+
+    // session-request-form__button-container
+    &__button-container {
+      margin-top: 30px;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+// Importing Bootstrap to get their media query mixins
+@import "imports";
+@import "variables";
+
+.case-studies {
+  border: 1px solid #979797;
+  padding-top: 33px;
+  background: linear-gradient(333.86deg, #A16F86 0%, #625180 47.9%, #3C3159 100%);
+
+  // case-studies__bottom-row
+  &__bottom-row {
+    margin-bottom: 32px;
+  }
+
+  // case-studies__column
+  &__column {
+    margin-top: calc(#{$case-study-position-xs} + 24px);
+  }
+
+  // case-studies__title
+  &__primary-title {
+    margin-bottom: 16px;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: $heading-font;
+    letter-spacing: 0;
+  }
+
+  // case-studies__subtitle
+  &__primary-subtitle {
+    margin-bottom: 9px;
+    line-height: 25px;
+    font-size: 16px;
+    font-family: $content-font;
+    letter-spacing: 0;
+  }
+
+  // case-studies__card
+  &__card {
+    padding-bottom: 31px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 7px;
+    background-color: #ffffff;
+  }
+
+  // case-studies__image
+  &__image {
+    margin-top: -$case-study-position-xs;
+  }
+
+  // case-studies__heading
+  &__heading {
+    margin-top: 16px;
+    margin-bottom: 9px;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: $content-font;
+    letter-spacing: 2.78px;
+    color: $trinity-red;
+  }
+
+  // case-studies__title
+  &__title {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $heading-font;
+    letter-spacing: 0;
+    color: $trinity-blue;
+  }
+
+  // case-studies__content
+  &__content {
+    flex-grow: 1;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: $content-font;
+    letter-spacing: 0;
+    color: $body-text-color;
+  }
+}
+
+// @media (max-width: 992px)
+@include media-breakpoint-up(lg) {
+
+  .case-studies {
+    padding-top: 81px;
+
+    // case-studies__bottom-row
+    &__bottom-row {
+      margin-bottom: 81px;
+    }
+
+    // case-studies__column
+    &__column {
+      margin-top: $case-study-position-lg;
+    }
+
+    // case-studies__primary-title
+    &__primary-title {
+      font-size: 36px;
+      line-height: 48px;
+    }
+
+    // case-studies__subtitle
+    &__primary-subtitle {
+      margin-bottom: 48px;
+    }
+
+    // case-studies__card
+    &__card {
+      height: 100%;
+      padding-bottom: 48px;
+      padding-left: 52px;
+      padding-right: 52px;
+    }
+
+    // case-studies__image
+    &__image {
+      margin-top: -$case-study-position-lg;
+    }
+
+    // case-studies__heading
+    &__heading {
+      margin-top: 38px;
+      margin-bottom: 4px;
+    }
+
+    // case-studies__title
+    &__title {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+}

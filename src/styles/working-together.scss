@@ -1,0 +1,119 @@
+// Importing Bootstrap to get their media query mixins
+@import "imports";
+@import "variables";
+
+.card-body {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.working-together {
+  margin-top: 32px;
+
+  // working-together__heading
+  &__heading {
+    margin-bottom: 24px;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: $heading-font;
+    letter-spacing: 0;
+    color: $trinity-blue;
+  }
+
+  // working-together__card-row
+  &__card-row {
+    margin-bottom: 32px
+  }
+
+  // working-together__copy-row
+  &__copy-row {
+    margin-bottom: calc(32px - 1rem);
+  }
+
+  // working-together__card
+  &__card {
+    margin-bottom: 16px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+    border: 0;
+    border-radius: 7px;
+    padding-top: 131px;
+    background-position: 50% -15px;
+    background-repeat: no-repeat;
+    background-size: auto 150px;
+    background-color: #ed9e98;
+  }
+
+  // working-together__copy
+  &__copy {
+    font-size: 16px;
+    line-height: 25px;
+    font-family: $content-font;
+    letter-spacing: 0;
+    color: $body-text-color;
+  }
+
+  // working-together__body
+  &__body {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color: #ffffff;
+  }
+
+  // working-together__title
+  &__title {
+    font-size: 16px;
+    line-height: 25px;
+    font-family: $content-font;
+    letter-spacing: 0;
+    color: $body-text-color;
+  }
+
+  // working-together__content
+  &__content {
+    font-size: 16px;
+    line-height: 25px;
+    font-family: $content-font;
+    letter-spacing: 0;
+    color: $body-text-color;
+  }
+}
+
+// @media (max-width: 992px)
+@include media-breakpoint-up(lg) {
+
+  .card-body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .working-together {
+    margin-top: 80px;
+
+    // working-together__heading
+    &__heading {
+      margin-bottom: 39px;
+      font-size: 36px;
+      line-height: 48px;
+    }
+
+    // working-together__card-row
+    &__card-row {
+      margin-top: 6px;
+      margin-bottom: 94px;
+    }
+
+    // working-together__copy-row
+    &__copy-row {
+      margin-top: 4px;
+      margin-bottom: 80px;
+    }
+
+    // working-together__card
+    &__card {
+      margin-bottom: unset;
+      height: 100%;
+      background-size: auto 158px;
+    }
+  }
+}
+
